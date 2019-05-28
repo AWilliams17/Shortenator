@@ -2,13 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="85994ebb-1eab-4fde-851d-f50ccc3809b7" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/.eslintrc.json" beforeDir="false" afterPath="$PROJECT_DIR$/../server/.eslintrc.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../server/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/api/api-routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/../server/api/api-routes.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../server/api/urlController.js" beforeDir="false" afterPath="$PROJECT_DIR$/../server/api/urlController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/api/urlModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/../server/api/urlModel.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../server/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/../server/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../server/bin/www" beforeDir="false" afterPath="$PROJECT_DIR$/../server/bin/www" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../server/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../server/package.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -50,7 +53,7 @@
       <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="width" value="1434" />
     <option name="height" value="873" />
   </component>
@@ -129,7 +132,7 @@
     <option name="totallyTimeSpent" value="6112000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="0" width="1442" height="872" extended-state="6" />
+    <frame x="-1" y="0" width="1442" height="872" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
