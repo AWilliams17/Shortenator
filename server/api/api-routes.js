@@ -8,12 +8,10 @@ router.get('/', function(req, res, next) {
 
 const urlController = require('./urlController');
 router.route('/url')
-    .get(urlController.index)
-    .post(urlController.create);
+    .post(urlController.create_url);
 
 router.route('/url/:url_shortcode')
-    .get(urlController.read)
-    .delete(urlController.update);
+    .get(urlController.get_url);
 
 
 module.exports = router;
