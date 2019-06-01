@@ -15,7 +15,8 @@ const urlController = require('./urlController');
 router.route('/url')
     .post(urlController.create_url);
 
-router.route('/url/:url_shortcode')
+//router.route('/url/:url_shortcode')
+router.route(['/url/:url_shortcode', '/url'])
     .get(urlController.get_url);
 
 
