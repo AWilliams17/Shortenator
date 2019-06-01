@@ -2,7 +2,12 @@ const express = require('express');
 const router = express.Router();
 
 router.get('/', function(req, res, next) {
-    res.json({ message: 'Test' });
+    res.status(200).send({
+        'Routes': {
+            '/api/create_url': 'Methods: (Post) Parameters: (url) Description: Creates & returns a shortcode for a url',
+            '/api/url/:shortcode': 'Methods: (Get) Description: Generates redirect for given shortcode'
+        }
+    });
 });
 
 
