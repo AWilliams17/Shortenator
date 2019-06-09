@@ -16,7 +16,7 @@ router.route('/create_url')
     .post(urlController.create_url);
 
 //router.route('/url/:url_shortcode')
-router.route(['/get_url/:url_shortcode', '/url_get'])
+router.route(['/get_url/:url_shortcode', '/get_url'])
     .get(urlController.get_url);
 
 
