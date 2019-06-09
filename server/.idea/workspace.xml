@@ -4,16 +4,8 @@
     <list default="true" id="b974d263-f0a6-4747-a830-1d5b8b0c5d99" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/../client/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../client/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../client/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../client/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/App.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/App.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/App.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/serviceWorker.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/components/root.js" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/components/root.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/api-routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/api-routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/urlController.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/urlController.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
