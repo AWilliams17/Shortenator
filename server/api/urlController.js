@@ -3,7 +3,7 @@ const Url = require('./urlModel');
 const validUrl = require('valid-url');
 const moment = require('moment');
 
-module.exports.create_url = function (req, res) {
+module.exports.create_redirect_key = function (req, res) {
     const url = req.body.url;
     if (!url) return res.status(400).json({
         'error': 'A url is required.'
@@ -21,20 +21,20 @@ module.exports.create_url = function (req, res) {
         });
 
         return res.status(201).json({
-            'url_shortcode': urlEntry.shortcode
+            'redirect_key': urlEntry.redirect_key
         });
     });
 };
 
-module.exports.get_url = function (req, res) {
-    const shortcode = req.params.url_shortcode;
-    if (!shortcode) return res.status(400).json({
-        'error': 'A shortcode is required.'
+module.exports.redirect = function (req, res) {
+    const redirect_key = req.params.redirect_key;
+    if (!redirect_key) return res.status(400).json({
+        'error': 'A redirect key is required.'
     });
 
-    Url.findOne({'shortcode': shortcode}, function (err, urlEntry) {
-        if (err || !urlEntry) return res.status(401).json({
-            'error': 'No matching entries with that shortcode found.'
+    Url.findOne({'redirect_key': redirect_key}, function (err, urlEntry) {
+        if (err || !urlEntry) return res.status(404).json({
+            'error': 'No matching entries with that redirect key found.'
         });
 
         const expirationDate = moment(urlEntry.createdAt).add(30, 'minutes');

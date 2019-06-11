@@ -4,20 +4,20 @@ const router = express.Router();
 router.get('/', function(req, res, next) {
     res.status(200).send({
         'Routes': {
-            '/api/create_url': 'Methods: (Post) Parameters: (url) Description: Creates & returns a shortcode for a url',
-            '/api/get_url/:shortcode': 'Methods: (Get) Description: Generates redirect for given shortcode'
+            '/api/create_redirect_key': 'Methods: (Post) Parameters: (url) Description: Creates & returns a key for a url',
+            '/api/redirect/:redirect_key': 'Methods: (Get) Description: Generates redirect for given key'
         }
     });
 });
 
 
 const urlController = require('./urlController');
-router.route('/create_url')
-    .post(urlController.create_url);
+router.route('/create_redirect_key')
+    .post(urlController.create_redirect_key);
 
-//router.route('/url/:url_shortcode')
-router.route(['/get_url/:url_shortcode', '/get_url'])
-    .get(urlController.get_url);
+
+router.route(['/redirect/:redirect_key', '/redirect'])
+    .get(urlController.redirect);
 
 
 module.exports = router;

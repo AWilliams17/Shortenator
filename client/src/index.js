@@ -7,6 +7,7 @@ import {
 } from 'react-router-dom';
 import Root from './components/root';
 import NotFound from './components/404';
+import Redirect from './components/redirect';
 
 class Main extends Component {
     render() {
@@ -14,8 +15,9 @@ class Main extends Component {
             <BrowserRouter>
                 <div className="content">
                     <Switch>
-                        <Route exact path="/" component={Root}/>
-                        <Route component={NotFound}/>
+                        <Route exact path="/" component={ Root }/>
+                        <Route path="/redirect/:redirect_key" component={ Redirect } />
+                        <Route component={ NotFound }/>
                     </Switch>
                 </div>
             </BrowserRouter>

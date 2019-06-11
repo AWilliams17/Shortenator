@@ -3,7 +3,7 @@ const shortID = require('shortid');
 const moment = require('moment');
 
 const urlSchema = mongoose.Schema({
-    shortcode:      { type: String, default: shortID.generate, unique: true },
+    redirect_key:   { type: String, default: shortID.generate, unique: true },
     url:            { type: String, required: true },
     createdAt:      { type: Date, expires: '30m', default: moment() }
 });
