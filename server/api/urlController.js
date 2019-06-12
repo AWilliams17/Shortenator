@@ -3,7 +3,7 @@ const Url = require('./urlModel');
 const validUrl = require('valid-url');
 const moment = require('moment');
 
-module.exports.create_redirect_key = function (req, res) {
+module.exports.create_uuid = function (req, res) {
     const url = req.body.url;
     if (!url) return res.status(400).json({
         'error': 'A url is required.'
@@ -21,26 +21,25 @@ module.exports.create_redirect_key = function (req, res) {
         });
 
         return res.status(201).json({
-            'redirect_key': urlEntry.redirect_key
+            'uuid': urlEntry.uuid
         });
     });
 };
 
 module.exports.redirect = function (req, res) {
-    const redirect_key = req.params.redirect_key;
-    if (!redirect_key) return res.status(400).json({
-        'error': 'A redirect key is required.'
+    const uuid = req.params.uuid;
+    if (!uuid) return res.status(400).json({
+        'error': 'A uuid is required.'
     });
 
-    Url.findOne({'redirect_key': redirect_key}, function (err, urlEntry) {
+    Url.findOne({'uuid': uuid}, function (err, urlEntry) {
         if (err || !urlEntry) return res.status(404).json({
-            'error': 'No matching entries with that redirect key found.'
+            'error': 'No matching entries with that uuid found.'
         });
-
-        const expirationDate = moment(urlEntry.createdAt).add(30, 'minutes');
+        console.log(urlEntry.createdAt);
         return res.status(200).json({
             'url': urlEntry.url,
-            'expiration_date': expirationDate
+            'submission_date': urlEntry.createdAt
         });
     });
 };

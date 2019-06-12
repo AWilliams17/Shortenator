@@ -16,7 +16,7 @@ class Main extends Component {
                 <div className="content">
                     <Switch>
                         <Route exact path="/" component={ Root }/>
-                        <Route path="/redirect/:redirect_key" component={ Redirect } />
+                        <Route path="/redirect/:uuid" component={ Redirect } />
                         <Route component={ NotFound }/>
                     </Switch>
                 </div>

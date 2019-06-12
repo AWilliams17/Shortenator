@@ -3,9 +3,9 @@ const shortID = require('shortid');
 const moment = require('moment');
 
 const urlSchema = mongoose.Schema({
-    redirect_key:   { type: String, default: shortID.generate, unique: true },
+    uuid:           { type: String, default: shortID.generate, unique: true },
     url:            { type: String, required: true },
-    createdAt:      { type: Date, expires: '30m', default: moment() }
+    createdAt:      { type: Date, expires: '30m', default: moment }
 });
 
 let Url = module.exports = mongoose.model('url', urlSchema);
