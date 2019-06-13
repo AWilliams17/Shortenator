@@ -77,14 +77,10 @@ class Redirect extends Component {
                     </CardBody>
                 </Card>
             );
-        } else if (this.state.error !== '') {
-            return (
-                <ErrorBox error_message={this.state.error} show_redirect={true}/>
-            );
         }
 
         return (
-            <ErrorBox show_redirect={true}/>
+            <ErrorBox error_message={this.state.error} show_redirect={true}/>
         );
     }
 }

@@ -1,7 +1,5 @@
-/* eslint-disable no-unused-vars,no-console */
 const Url = require('./urlModel');
 const validUrl = require('valid-url');
-const moment = require('moment');
 
 module.exports.create_uuid = function (req, res) {
     const url = req.body.url;
@@ -15,9 +13,9 @@ module.exports.create_uuid = function (req, res) {
 
     let urlEntry = new Url();
     urlEntry.url = url;
-    Url.create(urlEntry, function (err) {
-        if (err) return res.status(500).json({
-            'error': err.message
+    Url.create(urlEntry, function (error) {
+        if (error) return res.status(500).json({
+            'error': error.message
         });
 
         return res.status(201).json({
@@ -32,11 +30,11 @@ module.exports.redirect = function (req, res) {
         'error': 'A uuid is required.'
     });
 
-    Url.findOne({'uuid': uuid}, function (err, urlEntry) {
-        if (err || !urlEntry) return res.status(404).json({
+    Url.findOne({'uuid': uuid}, function (error, urlEntry) {
+        if (error || !urlEntry) return res.status(404).json({
             'error': 'No matching entries with that uuid found.'
         });
-        console.log(urlEntry.createdAt);
+
         return res.status(200).json({
             'url': urlEntry.url,
             'submission_date': urlEntry.createdAt

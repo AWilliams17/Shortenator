@@ -1,6 +1,6 @@
+const moment = require('moment');
 let mongoose = require('mongoose');
 const shortID = require('shortid');
-const moment = require('moment');
 
 const urlSchema = mongoose.Schema({
     uuid:           { type: String, default: shortID.generate, unique: true },

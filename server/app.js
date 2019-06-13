@@ -1,10 +1,10 @@
+const cookieParser = require('cookie-parser');
 const createError = require('http-errors');
 const express = require('express');
 const helmet = require('helmet');
-const path = require('path');
-const cookieParser = require('cookie-parser');
-const rateLimit = require('express-rate-limit');
 const logger = require('morgan');
+const path = require('path');
+const rateLimit = require('express-rate-limit');
 
 const app = express();
 
