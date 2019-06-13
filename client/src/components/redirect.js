@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 import React, { Component } from 'react';
 import Countdown from 'react-countdown-now';
 import PropTypes from 'prop-types';
@@ -48,7 +47,6 @@ class Redirect extends Component {
                 });
             })
             .catch(error => {
-                console.log(error.response.data.error);
                 this.setState({error: error.response.data.error});
             });
     }
@@ -85,7 +83,7 @@ class Redirect extends Component {
         }
 
         return (
-            <ErrorBox error_message={this.state.error} show_redirect={true}/>
+            <ErrorBox error_message={'An unknown error has occurred.'} show_redirect={true}/>
         );
     }
 }
