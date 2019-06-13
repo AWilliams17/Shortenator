@@ -2,22 +2,10 @@
 import React, { Component } from 'react';
 import Countdown from 'react-countdown-now';
 import PropTypes from 'prop-types';
+import ErrorBox from './interface/errorbox';
 import axios from 'axios';
 import moment from 'moment';
-import { Alert, Button, Card, CardBody, Input } from 'reactstrap';
-
-const ErrorBox = props  => {
-    return (
-        <Alert color='primary'>
-            <p>An error has occurred: {props.error}</p>
-            <a href={'/'}>Press here to return to the index</a>
-        </Alert>
-    );
-};
-ErrorBox.propTypes = {
-    error: PropTypes.string
-};
-
+import { Button, Card, CardBody, Input } from 'reactstrap';
 
 const countdownRenderer = ({ minutes, seconds, completed }) => {
     if (completed) {
@@ -60,6 +48,7 @@ class Redirect extends Component {
                 });
             })
             .catch(error => {
+                console.log(error.response.data.error);
                 this.setState({error: error.response.data.error});
             });
     }
@@ -91,12 +80,12 @@ class Redirect extends Component {
             );
         } else if (this.state.error !== '') {
             return (
-                <ErrorBox error={ this.state.error }/>
+                <ErrorBox error_message={this.state.error} show_redirect={true}/>
             );
         }
 
         return (
-            <ErrorBox error={ this.state.error }/>
+            <ErrorBox error_message={this.state.error} show_redirect={true}/>
         );
     }
 }
