@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-// TODO
+// TODO: Styles
 import React, { Component } from 'react';
 import Countdown from 'react-countdown-now';
 import PropTypes from 'prop-types';

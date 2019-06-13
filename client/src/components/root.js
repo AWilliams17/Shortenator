@@ -1,8 +1,9 @@
 /* eslint-disable no-console*/
-// TODO
+// TODO: Errors
 import React, { Component } from 'react';
 import axios from 'axios';
 import PropTypes from 'prop-types';
+import { Card, CardBody, CardTitle, Input, Button, Form } from 'reactstrap';
 
 class Index extends Component {
     static propTypes = {
@@ -37,10 +38,19 @@ class Index extends Component {
 
     render() {
         return (
-            <React.Fragment>
-                <input type="text" name="url" value={this.state.url} onChange={this.handleURLChange} />
-                <button type="button" onClick={this.submitURL}>Shorten URL</button>
-            </React.Fragment>
+            <Card>
+                <CardBody>
+                    <CardTitle>Submit URL</CardTitle>
+                    <Form inline>
+                        <Input
+                            type="text" name="url"
+                            value={this.state.url}
+                            onChange={this.handleURLChange}
+                            style={{ width: '300px' }}/>
+                        <Button type="button" onClick={this.submitURL}>Shorten URL</Button>
+                    </Form>
+                </CardBody>
+            </Card>
         );
     }
 }

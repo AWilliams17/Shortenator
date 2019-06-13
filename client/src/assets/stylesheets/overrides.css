@@ -1,0 +1,10 @@
+
+.form-control {
+    background-color: rgba(63, 62, 62, 0.8);
+    color: #bebcbd;
+}
+
+.form-control:focus {
+    background-color: rgb(75, 74, 74);
+    color: #fffdfe;
+}
