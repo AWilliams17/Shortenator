@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import React, { Component } from 'react';
 import { Alert } from 'reactstrap';
 
 class ErrorBox extends Component {

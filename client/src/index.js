@@ -1,13 +1,13 @@
 import React, { Component }  from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { Container, Nav, Navbar, NavbarBrand, NavItem, NavLink } from 'reactstrap';
 import Root from './components/root';
 import NotFound from './components/404';
 import Redirect from './components/redirect';
 import './assets/stylesheets/bootstrap.min.css';
 import './assets/stylesheets/overrides.css';
 import Styles from './assets/javascript/styles';
-import { Container, Nav, Navbar, NavbarBrand, NavItem, NavLink } from 'reactstrap';
 
 class Main extends Component {
     render() {
