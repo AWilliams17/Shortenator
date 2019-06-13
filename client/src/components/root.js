@@ -44,10 +44,10 @@ class Index extends Component {
                     <Form inline>
                         <Input
                             type="text" name="url"
-                            value={this.state.url}
+                            value={ this.state.url }
                             onChange={this.handleURLChange}
                             style={{ width: '300px' }}/>
-                        <Button type="button" onClick={this.submitURL}>Shorten URL</Button>
+                        <Button type="button" onClick={ this.submitURL }>Shorten URL</Button>
                     </Form>
                 </CardBody>
             </Card>

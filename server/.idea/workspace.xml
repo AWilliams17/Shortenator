@@ -2,15 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b974d263-f0a6-4747-a830-1d5b8b0c5d99" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/../client/.idea/dictionaries/awilliams17.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../client/.idea/dictionaries/awilliams17.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../client/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../client/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../client/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../client/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/components/404.js" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/components/404.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/assets/stylesheets/overrides.css" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/assets/stylesheets/overrides.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../client/src/components/redirect.js" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/components/redirect.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../client/src/components/root.js" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/components/root.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../client/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -236,12 +232,12 @@
       <workItem from="1560153994665" duration="4151000" />
       <workItem from="1560245128924" duration="2738000" />
       <workItem from="1560309147579" duration="11481000" />
-      <workItem from="1560350496521" duration="3524000" />
+      <workItem from="1560350496521" duration="4304000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64861000" />
+    <option name="totallyTimeSpent" value="65641000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="0" width="1442" height="872" extended-state="7" />
@@ -253,7 +249,7 @@
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50069445" side_tool="true" weight="0.32941177" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info id="npm" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49930555" weight="0.32941177" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49930555" visible="true" weight="0.32941177" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info id="Favorites" order="3" side_tool="true" />
