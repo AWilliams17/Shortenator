@@ -1,9 +1,8 @@
-/* eslint-disable no-console*/
-// TODO: Errors
 import React, { Component } from 'react';
 import axios from 'axios';
 import PropTypes from 'prop-types';
 import { Card, CardBody, CardTitle, Input, Button, Form } from 'reactstrap';
+import ErrorBox from './interface/errorbox';
 
 class Index extends Component {
     static propTypes = {
@@ -13,7 +12,8 @@ class Index extends Component {
     constructor(props) {
         super(props);
         this.state ={
-            url: ''
+            url: '',
+            error: ''
         };
     }
 
@@ -23,12 +23,12 @@ class Index extends Component {
 
         axios.post('/api/create_uuid', payload)
             .then(response => {
-                console.log(response);
                 this.props.history.push('/redirect/' + response.data.uuid);
 
             })
             .catch(error => {
-                console.log(error.response.data);
+                let errorMessage = error.response.data.error;
+                this.setState({error: errorMessage});
             });
     };
 
@@ -49,6 +49,9 @@ class Index extends Component {
                             style={{ width: '300px' }}/>
                         <Button type="button" onClick={ this.submitURL }>Shorten URL</Button>
                     </Form>
+                    {this.state.error !== '' &&
+                        <ErrorBox error_message={this.state.error}/>
+                    }
                 </CardBody>
             </Card>
         );

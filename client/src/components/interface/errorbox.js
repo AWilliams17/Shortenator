@@ -16,9 +16,13 @@ class ErrorBox extends Component {
     render() {
         return (
             <Alert color='primary'>
-                <p>
-                    An error has occurred: <span style={{color: 'lightsteelblue'}}>{this.props.error_message}</span>
-                </p>
+                {this.props.error_message
+                    ? <p>
+                        An error has occurred: <span style={{color: 'lightsteelblue'}}>{this.props.error_message}</span>
+                    </p>
+                    :
+                    <p>An unknown error has occurred.</p>
+                }
                 {this.props.show_redirect &&
                     <a href={'/'}>Press here to return to the index</a>
                 }

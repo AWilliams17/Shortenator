@@ -47,7 +47,8 @@ class Redirect extends Component {
                 });
             })
             .catch(error => {
-                this.setState({error: error.response.data.error});
+                let errorMessage = error.response.data.error;
+                this.setState({error: errorMessage});
             });
     }
 
@@ -83,7 +84,7 @@ class Redirect extends Component {
         }
 
         return (
-            <ErrorBox error_message={'An unknown error has occurred.'} show_redirect={true}/>
+            <ErrorBox show_redirect={true}/>
         );
     }
 }

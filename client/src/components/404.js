@@ -1,4 +1,3 @@
-// TODO: Styles
 import React, { Component } from 'react';
 import ErrorBox from './interface/errorbox';
 
