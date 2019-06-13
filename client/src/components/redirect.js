@@ -1,11 +1,23 @@
 /* eslint-disable no-console */
-// TODO: Styles
 import React, { Component } from 'react';
 import Countdown from 'react-countdown-now';
 import PropTypes from 'prop-types';
 import axios from 'axios';
 import moment from 'moment';
-import {Alert, Button, Card, CardBody, Input} from 'reactstrap';
+import { Alert, Button, Card, CardBody, Input } from 'reactstrap';
+
+const ErrorBox = props  => {
+    return (
+        <Alert color='primary'>
+            <p>An error has occurred: {props.error}</p>
+            <a href={'/'}>Press here to return to the index</a>
+        </Alert>
+    );
+};
+ErrorBox.propTypes = {
+    error: PropTypes.string
+};
+
 
 const countdownRenderer = ({ minutes, seconds, completed }) => {
     if (completed) {
@@ -77,13 +89,14 @@ class Redirect extends Component {
                     </CardBody>
                 </Card>
             );
+        } else if (this.state.error !== '') {
+            return (
+                <ErrorBox error={ this.state.error }/>
+            );
         }
 
         return (
-            <Alert color='primary'>
-                <p>No URL was found matching that ID/This ID has expired.</p>
-                <a href={'/'}>Press here to return to the index</a>
-            </Alert>
+            <ErrorBox error={ this.state.error }/>
         );
     }
 }
