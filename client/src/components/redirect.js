@@ -37,17 +37,17 @@ class Redirect extends Component {
         const uuid = params.uuid;
         axios.get('/api/redirect/' + uuid)
             .then(response => {
-                const submissionDate = moment(response.data.submission_date);
+                const submissionDate = moment(response.data.CreatedAt);
                 const timeElapsed = moment.duration(moment().diff(submissionDate));
                 const timeRemaining = ((30 - timeElapsed.asMinutes()) * 60000); // react-countdown-now needs it in MS
 
                 this.setState({
-                    url: response.data.url,
+                    url: response.data.URL,
                     expiration_time: timeRemaining
                 });
             })
             .catch(error => {
-                let errorMessage = error.response.data.error;
+                let errorMessage = error.response.data.Error;
                 this.setState({error: errorMessage});
             });
     }

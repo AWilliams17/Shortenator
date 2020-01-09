@@ -19,15 +19,15 @@ class Index extends Component {
 
     submitURL = () => {
         const url = this.state.url;
-        const payload = { 'url': url };
+        const payload = { 'URL': url };
 
         axios.post('/api/create_uuid', payload)
             .then(response => {
-                this.props.history.push('/redirect/' + response.data.uuid);
+                this.props.history.push('/redirect/' + response.data.UUID);
 
             })
             .catch(error => {
-                let errorMessage = error.response.data.error;
+                let errorMessage = error.response.data.Error;
                 this.setState({error: errorMessage});
             });
     };
